@@ -1,0 +1,127 @@
+.hMovie__container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-top: 120px;
+    .hMovie__header {
+        position: relative;
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #1a2a47;
+        padding-bottom: 10px;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 98px;
+            height: 3px;
+            background: #31d7a9;
+        }
+    }
+    .hMovie__item {
+        .view__detail {
+            display: none;
+        }
+        //Chỉnh margin của thư viện React Slick
+        .slick-slider {
+            .slick-slide > div {
+                margin: 0 10px;
+            }
+            .slick-prev:before,
+            .slick-next:before {
+                display: none;
+            }
+            .slick-arrow {
+                color: white;
+                font-size: 30px;
+                &:hover {
+                    color: rgb(161, 161, 161);
+                }
+            }
+            .slick-dots li button:before {
+                color: white;
+            }
+        }
+
+        // Hover vào movie
+        .hMovie__item__contain {
+            &:hover {
+                .view__detail {
+                    display: inline-block;
+                    margin-top: 10px;
+                    width: 100%;
+                    a {
+                        display: block;
+                        text-align: center;
+                        width: 100%;
+                    }
+                }
+                .hMovie__content {
+                    display: none;
+                }
+                .hMovie__img {
+                    &::before {
+                        opacity: 0.5;
+                        display: block;
+                    }
+                    .hMovie__icon {
+                        opacity: 1;
+                        display: block;
+                    }
+                }
+            }
+        }
+        .hMovie__img {
+            position: relative;
+            border-radius: 20px 20px 0 0;
+            overflow: hidden;
+            &::before {
+                content: "";
+                position: absolute;
+                background: linear-gradient(to top, #000, transparent 100%);
+                inset: 0;
+                width: 100%;
+                opacity: 0;
+                // display: none;
+                transition: all 0.5s;
+            }
+            .hMovie__icon {
+                border: 1px solid white;
+                padding: 16px;
+                text-align: center;
+                border-radius: 50%;
+                position: absolute;
+                background: rgba(0, 0, 0, 0.5);
+                top: 43%;
+                left: 43%;
+                z-index: 9;
+                text-align: center;
+                opacity: 0;
+                // display: none;
+                transition: all 0.5s;
+                .ant-btn-primary {
+                    background: none;
+                    padding: 4px;
+                    i {
+                        font-size: 1.6rem;
+                        position: relative;
+                        top: -1px;
+                        left: 3px;
+                    }
+                }
+            }
+        }
+        .hMovie__content {
+            padding: 0 20px;
+            background-color: #032055;
+            .hMContent__title {
+                padding: 23px 0;
+                text-transform: capitalize;
+                border-bottom: 1px dashed #11326f;
+            }
+        }
+    }
+}
+

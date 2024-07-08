@@ -1,0 +1,36 @@
+.login {
+  // position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .form {
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    height: 600px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 70vw;
+    // transform: translate(-50%, -50%);
+    border-radius: 10px;
+    background-color: transparent;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+      rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    // margin: 100px 0;
+    @media screen and (max-width: 1320px) {
+      width: 400px;
+    }
+    .login-card {
+      padding-right: 20px;
+      @media screen and (max-width: 1320px) {
+        padding-right: 0px;
+      }
+    }
+
+    .animate {
+      @media screen and (max-width: 1320px) {
+        display: none;
+      }
+    }
+  }
+}

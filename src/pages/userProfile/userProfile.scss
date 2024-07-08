@@ -1,0 +1,48 @@
+.userProfile__container {
+    background: #001232;
+    .userProfile__banner {
+        position: relative;
+        background-image: url("../../assets/img/userProfileBanner.jpg");
+        height: 350px;
+        width: 100%;
+        &::before {
+            content: "";
+            background: rgba(0, 0, 0, 0.4);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            // z-index: 0;
+        }
+        .user__banner__item {
+            position: relative;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+            top: 200px;
+            z-index: 1;
+            font-style: italic;
+            .userBanner__title {
+                font-weight: bold;
+                font-size: 4rem;
+                line-height: 120%;
+                color: #fff;
+                margin-top: 0;
+            }
+            hr {
+                background-image: url(../../assets/img/hr.png);
+                width: 64px;
+                height: 10px;
+                display: inline-block;
+                border: none;
+                margin-top: 10px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .profile__content {
+        max-width: 1170px;
+        margin: 0 auto;
+    }
+}

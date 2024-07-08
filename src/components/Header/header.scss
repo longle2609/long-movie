@@ -1,0 +1,191 @@
+@import "../../styles/base/colors.scss";
+
+.header {
+    position: absolute;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.102);
+    padding: 21px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    transition: all 0.5s;
+    .header__container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        .header__log__res {
+            .headerlg__item {
+                color: #e1dddd;
+                font-weight: 500;
+                line-height: 1.167;
+                letter-spacing: 0em;
+                font-size: 1.3rem;
+                &:hover {
+                    .fa-circle-user {
+                        color: #fde047;
+                    }
+                    color: #fde047;
+                }
+            }
+        }
+        .check__btn,
+        .check__logRes {
+            font-size: 30px;
+            color: white;
+            float: right;
+            margin-right: 30px;
+            cursor: pointer;
+            display: none;
+        }
+
+        .header__menu {
+            li {
+                margin: 0 20px;
+                padding: 5px 12px;
+                position: relative;
+                Link {
+                    color: #e9eeff;
+                    font-size: 16px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    padding: 5px;
+                }
+                a:hover {
+                    color: #fde047;
+                }
+            }
+        }
+    }
+}
+.header__active {
+    background: #0a1e5e;
+    border: none;
+}
+
+// Responsive
+// max-width: 1200px
+@media only screen and (max-width: 1200px) {
+    .header {
+        .header__container {
+            width: 1050px;
+            margin: 0 auto;
+            .header__menu {
+                li {
+                    padding: 5px 0;
+                }
+            }
+        }
+    }
+}
+//max-width:1024px
+@media only screen and (max-width: 1024px) {
+    .header {
+        .header__container {
+            width: 100%;
+            .header__log__res {
+                margin-right: 25px;
+            }
+            .check__btn {
+                display: inline-block;
+                margin-right: 0;
+            }
+            .header__menu {
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                top: 80px;
+                background: rgba(0, 0, 112, 0.5);
+                left: 0;
+                text-align: center;
+                display: block;
+                left: -100%;
+                transition: all 0.5s;
+                li {
+                    padding: 20px 0px;
+                }
+                &::before {
+                    content: "";
+                    position: absolute;
+                    background: rgba(0, 18, 50, 0.6);
+                    inset: 0;
+                    // z-index: 2;
+                }
+            }
+            .open__menu {
+                left: 0;
+            }
+        }
+    }
+}
+// max-width: 640px
+@media only screen and (max-width: 640px) {
+    .header {
+        .header__container {
+            .header__logo {
+                a {
+                }
+            }
+        }
+    }
+}
+// max-width: 576px
+@media only screen and (max-width: 576px) {
+    .header {
+        .header__container {
+            .check__btn {
+                margin-top: 3px;
+            }
+            .header__log__res {
+                .headerlg__item {
+                    i {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// max-width: 500px
+@media only screen and (max-width: 500px) {
+    .header {
+        .header__container {
+            .check__logRes {
+                display: inline-block;
+                margin-top: 3px;
+            }
+            .header__log__res {
+                position: absolute;
+                right: -100%;
+                padding: 20px;
+                bottom: -50px;
+                // right: -25px;
+                background: rgba(0, 0, 112, 0.5);
+                transition: all 0.5s;
+                z-index: 3;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    background: rgba(0, 18, 50, 0.6);
+                    inset: 0;
+                    // z-index: 2;
+                }
+                span {
+                    display: none;
+                }
+                .headerlg__item {
+                    font-size: 1.2rem;
+                    border: 1px solid white;
+                    border-radius: 5px;
+                    margin: 0 5px;
+                    padding: 5px;
+                    z-index: 3;
+                }
+            }
+            .open__logRes {
+                right: -25px;
+            }
+        }
+    }
+}

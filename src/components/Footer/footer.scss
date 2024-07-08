@@ -1,0 +1,133 @@
+.footer {
+    // border: 1px solid yellow;
+    background: #001232;
+    color: white;
+    padding-top: 100px;
+    &::before {
+        // border: 1px solid red;
+        content: "";
+        position: absolute;
+        top: 220px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url(../../assets/img/footer-shape.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+    }
+    .f__contain {
+        max-width: 1170px;
+        margin: 0 auto;
+    }
+    .footer__sub {
+        position: relative;
+        background: url("../../assets/img/newslater-bg01.jpg");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        border-radius: 20px;
+        overflow: hidden;
+        padding: 60px 20px;
+        margin-bottom: 120px;
+        text-align: center;
+        &::before {
+            content: "";
+            position: absolute;
+            background-image: -webkit-linear-gradient(
+                0deg,
+                #7400ba 0%,
+                #0f5ae0 100%
+            );
+            opacity: 0.8;
+            inset: 0;
+        }
+        .fSub__container {
+            position: relative;
+            max-width: 540px;
+            margin: 0 auto;
+            .fsub__item {
+                .fsub__cate {
+                    color: #31d7a9;
+                    margin-bottom: 23px;
+                    font-size: 1.8rem;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                }
+                .fsub__title {
+                    margin-bottom: 50px;
+                    text-transform: uppercase;
+                    font-size: 2.25rem;
+                    font-weight: 700;
+                }
+                .fsub__form {
+                    position: relative;
+                    input {
+                        height: 50px;
+                        padding-right: 160px;
+                        color: #99abe2;
+                        border: 1px solid rgba(255, 255, 255, 0.4);
+                        border-radius: 25px;
+                        padding-left: 20px;
+                        box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1);
+                        background: transparent;
+                        width: 100%;
+                    }
+                    button {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        background-image: -webkit-linear-gradient(
+                            169deg,
+                            #5560ff 17%,
+                            #aa52a1 63%,
+                            #ff4343 100%
+                        );
+                        box-shadow: 0px 10px 15px 0px rgba(59, 55, 188, 0.5);
+                        width: auto;
+                        padding: 0 40px;
+                        border-radius: 25px;
+                        border: none;
+                        height: 50px;
+                        color: #dbe2fb;
+                    }
+                }
+            }
+        }
+    }
+    .footer__info {
+        .fInfo__top {
+            position: relative;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            .fsocial__icon {
+                i {
+                    margin-left: 25px;
+                    font-size: 2rem;
+                    cursor: pointer;
+                    &:hover {
+                        color: #31d7a9;
+                    }
+                }
+            }
+        }
+        .fInfo__bottom {
+            position: relative;
+            // border: 1px solid yellow;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            .fbot__link {
+                display: flex;
+                p {
+                    cursor: pointer;
+                    margin-left: 25px;
+                }
+            }
+        }
+    }
+}

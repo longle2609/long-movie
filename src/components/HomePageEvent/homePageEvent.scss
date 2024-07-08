@@ -1,0 +1,80 @@
+.hEvent__container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-top: 120px;
+    padding-bottom: 70px;
+    .hEvent__header {
+        position: relative;
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #1a2a47;
+        padding-bottom: 10px;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 98px;
+            height: 3px;
+            background: #31d7a9;
+        }
+    }
+    .hEvent__item {
+        .hEvent__item__contain {
+            overflow: hidden;
+            border-radius: 20px;
+            transition: all 0.3s;
+            &:hover {
+                background: grey;
+                opacity: 0.7;
+                cursor: pointer;
+            }
+            .event__date {
+                position: absolute;
+                top: 0;
+                left: 20px;
+                padding: 12px;
+                border-radius: 0 0 30px 30px;
+                background-image: linear-gradient(
+                    45deg,
+                    #f54646 0%,
+                    #f53da1 100%
+                );
+            }
+            .hEvent__content {
+                padding: 0 20px;
+                background-color: #032055;
+                .hEContent__title {
+                    padding: 23px 0;
+                    text-transform: capitalize;
+                    border-bottom: 1px dashed #11326f;
+                }
+                .hEContent__address {
+                    padding: 17px 0;
+                }
+            }
+        }
+        // Custom Lib React Slick
+        .slick-slider {
+            .slick-slide > div {
+                margin: 0 10px;
+            }
+            .slick-prev:before,
+            .slick-next:before {
+                display: none;
+            }
+            .slick-arrow {
+                color: white;
+                font-size: 30px;
+                &:hover {
+                    color: rgb(161, 161, 161);
+                }
+            }
+            .slick-dots li button:before {
+                color: white;
+            }
+        }
+    }
+}
